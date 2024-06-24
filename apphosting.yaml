@@ -10,7 +10,7 @@ runConfig:
 env:
   # Get these values from the Firebase console
   - variable: NEXT_PUBLIC_API_KEY
-    secret: AIzaSyAzUbNfP85ne138KUBSq_ZaR4rtgO5EkDY
+    value: AIzaSyAzUbNfP85ne138KUBSq_ZaR4rtgO5EkDY
   - variable: NEXT_PUBLIC_AUTH_DOMAIN
     value: schoolsfire-a4f33.firebaseapp.com
   - variable: NEXT_PUBLIC_PROJECT_ID
