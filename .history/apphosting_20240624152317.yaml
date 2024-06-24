@@ -1,0 +1,26 @@
+env:
+  # Get these values from the Firebase console
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: AIzaSyAzUbNfP85ne138KUBSq_ZaR4rtgO5EkDY
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: schoolstore-eb187.firebaseapp.com
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: schoolstore-eb187
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: schoolstore-eb187.appspot.com
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: 270542469149
+  - variable: NEXT_PUBLIC_FIREBASE_APP_IDschoolsfire-a4f33.firebaseapp.com
+    value: 1:270542469149:web:3b5088c1f89a5862c8eef4
+  -variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: G-9600KG685E
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAzUbNfP85ne138KUBSq_ZaR4rtgO5EkDY",
+  authDomain: "",
+  projectId: "schoolsfire-a4f33",
+  storageBucket: "schoolsfire-a4f33.appspot.com",
+  messagingSenderId: "551242916570",
+  appId: "1:551242916570:web:1e6a45022550268432fbe3",
+  measurementId: "G-71R24RWDWJ"
+};

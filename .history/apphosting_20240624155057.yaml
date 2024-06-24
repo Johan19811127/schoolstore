@@ -1,0 +1,16 @@
+env:
+  # Get these values from the Firebase console
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    secre: "AIzaSyAzUbNfP85ne138KUBSq_ZaR4rtgO5EkDY"
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "schoolsfire-a4f33.firebaseapp.com"
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "schoolsfire-a4f33"
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "schoolsfire-a4f33.appspot.com"
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: 551242916570
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:551242916570:web:1e6a45022550268432fbe3"
+  -variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: "G-71R24RWDWJ"
