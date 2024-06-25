@@ -1,27 +1,27 @@
 "use client";
 
-// This components handles the restaurant listings page
+// This component handles the restaurant listings page
 // It receives data from src/app/page.jsx, such as the initial restaurants and search params from the URL
 
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { React, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import renderStars from "@/src/components/Stars.jsx";
 import { getRestaurantsSnapshot } from "@/src/lib/firebase/firestore.js";
 import Filters from "@/src/components/Filters.jsx";
 
 const RestaurantItem = ({ restaurant }) => (
-	<li key={restaurant.id}>
+	<li>
 		<Link href={`/restaurant/${restaurant.id}`}>
-			<ActiveResturant restaurant={restaurant} />
+			<ActiveRestaurant restaurant={restaurant} />
 		</Link>
 	</li>
 );
 
-const ActiveResturant = ({ restaurant }) => (
+const ActiveRestaurant = ({ restaurant }) => (
 	<div>
 		<ImageCover photo={restaurant.photo} name={restaurant.name} />
-		<ResturantDetails restaurant={restaurant} />
+		<RestaurantDetails restaurant={restaurant} />
 	</div>
 );
 
@@ -31,7 +31,7 @@ const ImageCover = ({ photo, name }) => (
 	</div>
 );
 
-const ResturantDetails = ({ restaurant }) => (
+const RestaurantDetails = ({ restaurant }) => (
 	<div className="restaurant__details">
 		<h2>{restaurant.name}</h2>
 		<RestaurantRating restaurant={restaurant} />
@@ -74,10 +74,10 @@ export default function RestaurantListings({
 
 	useEffect(() => {
 		routerWithFilters(router, filters);
-	}, [filters]);
+	}, [filters, router]);
 
 	useEffect(() => {
-		const unsubscribe = getRestaurantsSnapshot(data => {
+		const unsubscribe = getRestaurantsSnapshot((data) => {
 			setRestaurants(data);
 		}, filters);
 
@@ -90,11 +90,8 @@ export default function RestaurantListings({
 		<article>
 			<Filters filters={filters} setFilters={setFilters} />
 			<ul className="restaurants">
-				{restaurants.map(restaurant => (
-					<RestaurantItem
-						key={restaurant.id}
-						restaurant={restaurant}
-					/>
+				{restaurants.map((restaurant) => (
+					<RestaurantItem key={restaurant.id} restaurant={restaurant} />
 				))}
 			</ul>
 		</article>
